@@ -1,0 +1,41 @@
+.mat-toolbar {
+  background: #ffffff;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.mat-toolbar-row,
+.mat-toolbar-single-row {
+  height: 74px;
+}
+
+.mat-button:hover {
+  background-color: #ffe803;
+}
+
+.activebutton {
+  background-color: #ffe803;
+}
+
+.underline {
+  text-decoration: underline;
+  text-decoration-color: #c22325;
+  text-underline-offset: 2px;
+}
+
+.margin-5 {
+  margin: 5px;
+}
+
+.margin-10 {
+  margin: 10px;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+}
