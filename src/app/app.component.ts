@@ -3,6 +3,7 @@ import { OverlayContainer } from '@angular/cdk/overlay';
 import { Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { Subscription } from 'rxjs';
+import { MediaMatcher } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-root',
@@ -10,19 +11,28 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+
   darkThemeActive: Boolean = true;
   @HostBinding('class') componentCssClass = 'dark-theme';
   href: string = '';
   subscriptions: Subscription = new Subscription();
+  mobileQuery: MediaQueryList;
 
   constructor(
     public overlayContainer: OverlayContainer,
     public changeDetectorRef: ChangeDetectorRef,
     public router: Router,
-    public location: Location
+    public location: Location,
+    public media: MediaMatcher,
   ) {
     this.toggleTheme();
+    this.mobileQuery = media.matchMedia('(max-width: 920px)');
+    this._mobileQueryListener = () => changeDetectorRef.detectChanges();
   }
+
+  private _mobileQueryListener(): void {
+
+  };
 
   ngOnInit(): void {
     const routerSub = this.router.events.subscribe((val) => {
