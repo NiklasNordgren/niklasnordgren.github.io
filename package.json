@@ -21,6 +21,9 @@
     "@angular/platform-browser": "~11.2.13",
     "@angular/platform-browser-dynamic": "~11.2.13",
     "@angular/router": "~11.2.13",
+    "ng2-pdf-viewer": "6.3.2",
+    "@types/pdfjs-dist": "2.1.7",
+    "pdfjs-dist": "2.5.207",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.3"

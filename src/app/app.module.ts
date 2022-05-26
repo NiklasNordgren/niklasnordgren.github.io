@@ -12,11 +12,14 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatDividerModule} from '@angular/material/divider';
 
+import { PdfViewerModule } from 'ng2-pdf-viewer';
+
 import { HomeComponent } from './home/home.component';
 import { RootformComponent } from './rootform/rootform.component';
 import { ContactComponent } from './contact/contact.component';
 import { BusinessconceptComponent } from './businessconcept/businessconcept.component';
 import { GdprComponent } from './gdpr/gdpr.component';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 @NgModule({
   declarations: [
@@ -37,10 +40,13 @@ import { GdprComponent } from './gdpr/gdpr.component';
     MatCardModule,
     MatButtonToggleModule,
     MatGridListModule,
-    MatDividerModule
+    MatDividerModule,
+    PdfViewerModule
   ],
   providers: [],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
+
+platformBrowserDynamic().bootstrapModule(AppModule);

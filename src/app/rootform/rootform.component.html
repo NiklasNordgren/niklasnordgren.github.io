@@ -1,1 +1,22 @@
-<p>rootform works!</p>
+<mat-card>
+  <mat-card-title>
+    <ion-icon name="document"></ion-icon><span> Rotblankett</span>
+  </mat-card-title>
+  <mat-divider [inset]="true"></mat-divider>
+  <mat-card-content>
+    <!--
+    <pdf-viewer mat-card-image class="pdf-viewer-container" [src]="pdfSrc" [render-text]="true" [show-borders]="true"
+      [original-size]="false" [zoom]="0.5" (page-rendered)="pageIsRendered()" (click)="pdfClick()">
+    </pdf-viewer>
+    -->
+    <p></p>
+    <p>För mer information angående rotavdrag hänvisar vi till skatteverkets hemsida, länk finns <span class="info-link"
+        (click)="infoLinkClick()">här</span>.</p>
+    <p>Tryck på knappen nedan för att öppna blankett för ROT-avtal mellan Eltjänst Jonny Östberg AB, godkänd för F-skatt
+      och konsument.</p>
+    <button color="accent" mat-raised-button (click)="pdfClick()">
+      <ion-icon name="document"></ion-icon><span class="button-text-wrapper">Öppna Rotblankett</span>
+    </button>
+
+  </mat-card-content>
+</mat-card>

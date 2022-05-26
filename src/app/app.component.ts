@@ -10,7 +10,7 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  darkThemeActive: Boolean = false;
+  darkThemeActive: Boolean = true;
   @HostBinding('class') componentCssClass = 'dark-theme';
   href: string = '';
   subscriptions: Subscription = new Subscription();
