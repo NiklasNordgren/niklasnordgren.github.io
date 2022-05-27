@@ -1,8 +1,10 @@
 <mat-card>
   <mat-card-title>
-    <ion-icon name="document"></ion-icon><span> Rotblankett</span>
+    <h1>
+      <ion-icon name="document"></ion-icon><span> Rotblankett</span>
+    </h1>
   </mat-card-title>
-  <mat-divider [inset]="true"></mat-divider>
+
   <mat-card-content>
     <!--
     <pdf-viewer mat-card-image class="pdf-viewer-container" [src]="pdfSrc" [render-text]="true" [show-borders]="true"
@@ -10,8 +12,8 @@
     </pdf-viewer>
     -->
     <p></p>
-    <p>Mer information angående rotavdrag finns till exempel på skatteverkets hemsida, länk finns <span class="info-link"
-        (click)="infoLinkClick()">här</span>.</p>
+    <p>Information angående rotavdrag finns till bland annat på skatteverkets hemsida, länk finns <span
+        class="info-link" (click)="infoLinkClick()">här</span>.</p>
     <p>Tryck på knappen nedan för att öppna blankett för ROT-avtal mellan Eltjänst Jonny Östberg AB, godkänd för F-skatt
       och konsument.</p>
     <button color="accent" mat-raised-button (click)="pdfClick()">

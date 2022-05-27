@@ -1,9 +1,9 @@
-import { ChangeDetectorRef, Component, HostBinding } from '@angular/core';
+import { ChangeDetectorRef, Component, HostBinding, HostListener } from '@angular/core';
 import { OverlayContainer } from '@angular/cdk/overlay';
 import { Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { Subscription } from 'rxjs';
-import { MediaMatcher } from '@angular/cdk/layout';
+import { BreakpointObserver, MediaMatcher } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +12,12 @@ import { MediaMatcher } from '@angular/cdk/layout';
 })
 export class AppComponent {
 
-  darkThemeActive: Boolean = true;
+  @HostListener('window:resize', ['$event'])
+  onResize(event: { target: { innerWidth: any; }; }) {
+    this.changeDetectorRef.detectChanges();
+  }
+
+  darkThemeActive: Boolean = false;
   @HostBinding('class') componentCssClass = 'dark-theme';
   href: string = '';
   subscriptions: Subscription = new Subscription();
@@ -24,15 +29,14 @@ export class AppComponent {
     public router: Router,
     public location: Location,
     public media: MediaMatcher,
+    public breakpointObserver: BreakpointObserver
   ) {
     this.toggleTheme();
     this.mobileQuery = media.matchMedia('(max-width: 920px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
   }
 
-  private _mobileQueryListener(): void {
-
-  };
+  private _mobileQueryListener(): void {}
 
   ngOnInit(): void {
     const routerSub = this.router.events.subscribe((val) => {
@@ -55,6 +59,7 @@ export class AppComponent {
   }
 
   ngOnDestroy(): void {
+    this.mobileQuery.removeListener(this._mobileQueryListener);
     this.subscriptions.unsubscribe();
   }
 }

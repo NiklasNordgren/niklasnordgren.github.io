@@ -35,6 +35,7 @@ body {
 .mat-card {
   border-radius: 0px !important;
   height: calc(100% - (2*74px));
+  overflow-y: auto;
 }
 
 .margin-5 {

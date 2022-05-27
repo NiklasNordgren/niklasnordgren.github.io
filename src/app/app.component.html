@@ -51,57 +51,62 @@
       <button mat-button [routerLink]="['/gdpr']" routerLinkActive="activebutton" class="margin-5">
         <div *ngIf="href == '/gdpr'; then gdprformButtonFilled else gdprformButtonOutline"></div>
         <ng-template #gdprformButtonFilled>
-          <ion-icon name="people"></ion-icon><span class="button-text-wrapper" routerLinkActive="underline">GDPR</span>
+          <ion-icon name="people"></ion-icon><span class="button-text-wrapper"
+            routerLinkActive="underline">GDPR-Policy</span>
         </ng-template>
         <ng-template #gdprformButtonOutline>
           <ion-icon name="people-outline"></ion-icon><span class="button-text-wrapper"
-            routerLinkActive="underline">GDPR</span>
+            routerLinkActive="underline">GDPR-Policy</span>
         </ng-template>
       </button>
     </div>
     <span class="fill-space"></span>
+
+    <span class="fill-space"></span>
+    <button mat-mini-fab class="margin-right-1" aria-label="Instagram" matTooltip="Instagram">
+      <ion-icon name="logo-instagram"></ion-icon>
+    </button>
+    <button mat-mini-fab class="margin-right-1" aria-label="Facebook" matTooltip="Facebook">
+      <ion-icon name="logo-facebook"></ion-icon>
+    </button>
+
     <div *ngIf="darkThemeActive; then thenBlock else elseBlock"></div>
     <ng-template #thenBlock>
-      <button (click)="toggleTheme()" mat-mini-fab class="margin-right-3"
+      <button (click)="toggleTheme()" mat-mini-fab class="margin-right-1"
         aria-label="Icon button with a half moon icon, dark theme" matTooltip="Dark theme">
         <ion-icon name="moon-outline"></ion-icon>
       </button>
     </ng-template>
     <ng-template #elseBlock>
-      <button (click)="toggleTheme()" mat-mini-fab class="margin-right-3"
+      <button (click)="toggleTheme()" mat-mini-fab class="margin-right-1"
         aria-label="Icon button with sun icon, light theme" matTooltip="Light theme">
         <ion-icon name="sunny-outline"></ion-icon>
       </button>
     </ng-template>
+    
   </mat-toolbar>
+  <mat-divider></mat-divider>
 
   <router-outlet></router-outlet>
 
   <mat-toolbar style="background-color: #9b9b9b; position: fixed; bottom: 0;">
-    <mat-divider vertical style="height:30px" class="margin-left-1"></mat-divider>
-    <span style="color:white; font-size: 12px;" class="margin-left-1">
-      <ion-icon name="location-outline"></ion-icon> Eltjänst Jonny Östberg AB, Jugasvägen 10, 81135, Sandviken
-    </span>
-    <mat-divider vertical style="height:30px" class="margin-left-1"></mat-divider>
-    <span style="color:white; font-size: 12px;" class="margin-left-1">
-      <ion-icon name="call-outline"></ion-icon> 070 378 64 30
-    </span>
-    <mat-divider vertical style="height:30px" class="margin-left-1"></mat-divider>
-    <span style="color:white; font-size: 12px;" class="margin-left-1">
-      <ion-icon name="mail-outline"></ion-icon> jonny@eltjanstsandviken.se
-    </span>
-    <mat-divider vertical style="height:30px" class="margin-left-1"></mat-divider>
-    <span style="color:white; font-size: 12px;" class="margin-left-1">
-      <ion-icon name="briefcase-outline"></ion-icon> Org.nr: 556977-5157
-    </span>
-    <mat-divider vertical style="height:30px" class="margin-left-1"></mat-divider>
-    <span class="fill-space"></span>
-    <button mat-mini-fab class="margin-right-1" aria-label="Instagram" matTooltip="Instagram">
-      <ion-icon name="logo-instagram"></ion-icon>
-    </button>
-    <button mat-mini-fab class="margin-right-3" aria-label="Facebook" matTooltip="Facebook">
-      <ion-icon name="logo-facebook"></ion-icon>
-    </button>
+    <div style="display: flex; margin: 0 auto;">
+      <span style="color:white; font-size: 12px;" class="margin-left-1">
+        <ion-icon name="location-outline"></ion-icon> Eltjänst Jonny Östberg AB, Jugasvägen 10, 81135, Sandviken
+      </span>
+      <mat-divider vertical class="margin-left-1" style="height: 30px;"></mat-divider>
+      <span style="color:white; font-size: 12px;" class="margin-left-1">
+        <ion-icon name="call-outline"></ion-icon> 070 378 64 30
+      </span>
+      <mat-divider vertical class="margin-left-1" style="height: 30px;"></mat-divider>
+      <span style="color:white; font-size: 12px;" class="margin-left-1">
+        <ion-icon name="mail-outline"></ion-icon> jonny@eltjanstsandviken.se
+      </span>
+      <mat-divider vertical class="margin-left-1" style="height: 30px;"></mat-divider>
+      <span style="color:white; font-size: 12px;" class="margin-left-1">
+        <ion-icon name="briefcase-outline"></ion-icon> Org.nr: 556977-5157
+      </span>
+    </div>
   </mat-toolbar>
 </ng-template>
 
@@ -131,11 +136,12 @@
     </ng-template>
   </mat-toolbar>
 
+  <mat-divider ></mat-divider>
   <router-outlet></router-outlet>
 
   <mat-toolbar style="background-color: #9b9b9b; position: fixed; bottom: 0;">
-    <div class="outer">
-      <div class="inner">
+    <div class="outer-mobile-footer">
+      <div class="inner-mobile-footer">
         <button mat-mini-fab [routerLink]="['/home']">
           <div *ngIf="href == '/home'; then homeButtonFilled else homeformButtonOutline"></div>
           <ng-template #homeButtonFilled>
@@ -164,7 +170,8 @@
           </ng-template>
         </button>
         <button mat-mini-fab [routerLink]="['/businessconcept']">
-          <div *ngIf="href == '/businessconcept'; then businessconceptButtonFilled else businessconceptButtonOutline"></div>
+          <div *ngIf="href == '/businessconcept'; then businessconceptButtonFilled else businessconceptButtonOutline">
+          </div>
           <ng-template #businessconceptButtonFilled>
             <ion-icon name="bulb"></ion-icon>
           </ng-template>

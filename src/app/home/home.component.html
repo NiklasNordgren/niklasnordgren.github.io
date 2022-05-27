@@ -1,6 +1,27 @@
-<mat-grid-list cols="16" rowHeight="275px">
-  <mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows">
-    <img class="image margin-10" src={{tile.imgSrc}}>
-  </mat-grid-tile>
-</mat-grid-list>
-<div style="height: 75px;"></div>
+<mat-card>
+  <mat-card-content>
+
+    <div *ngIf="mobileQuery.matches; then mobile else browser"></div>
+    <ng-template #browser>
+      <mat-grid-list cols="16" rowHeight="275px">
+        <mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows">
+          <img class="image margin-10" src={{tile.imgSrc}}>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </ng-template>
+    <ng-template #mobile>
+
+      <mat-grid-list cols="1">
+        <mat-grid-tile *ngFor="let tile of tiles" [colspan]="1" [rowspan]="1">
+          <img style="margin-bottom: 2px;" class="image" src={{tile.imgSrc}}>
+        </mat-grid-tile>
+      </mat-grid-list>
+
+
+
+    </ng-template>
+
+
+
+  </mat-card-content>
+</mat-card>
