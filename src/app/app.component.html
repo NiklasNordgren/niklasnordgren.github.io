@@ -7,32 +7,32 @@
       <button mat-button [routerLink]="['/home']" routerLinkActive="activebutton" class="margin-5">
         <div *ngIf="href == '/home'; then homeButtonFilled else homeButtonOutline"></div>
         <ng-template #homeButtonFilled>
-          <ion-icon name="home"></ion-icon><span class="button-text-wrapper" routerLinkActive="underline">Hem</span>
+          <ion-icon name="home"></ion-icon><span class="button-text-wrapper" routerLinkActive="underline-red">Hem</span>
         </ng-template>
         <ng-template #homeButtonOutline>
           <ion-icon name="home-outline"></ion-icon><span class="button-text-wrapper"
-            routerLinkActive="underline">Hem</span>
+            routerLinkActive="underline-red">Hem</span>
         </ng-template>
       </button>
       <button mat-button [routerLink]="['/rootform']" routerLinkActive="activebutton" class="margin-5">
         <div *ngIf="href == '/rootform'; then rootformButtonFilled else rootformButtonOutline"></div>
         <ng-template #rootformButtonFilled>
           <ion-icon name="document"></ion-icon><span class="button-text-wrapper"
-            routerLinkActive="underline">Rotblankett</span>
+            routerLinkActive="underline-red">Rotblankett</span>
         </ng-template>
         <ng-template #rootformButtonOutline>
           <ion-icon name="document-outline"></ion-icon><span class="button-text-wrapper"
-            routerLinkActive="underline">Rotblankett</span>
+            routerLinkActive="underline-red">Rotblankett</span>
         </ng-template>
       </button>
       <button mat-button [routerLink]="['/contact']" routerLinkActive="activebutton" class="margin-5">
         <div *ngIf="href == '/contact'; then contactformButtonFilled else contactformButtonOutline"></div>
         <ng-template #contactformButtonFilled>
-          <ion-icon name="mail"></ion-icon><span class="button-text-wrapper" routerLinkActive="underline">Kontakt</span>
+          <ion-icon name="mail"></ion-icon><span class="button-text-wrapper" routerLinkActive="underline-red">Kontakt</span>
         </ng-template>
         <ng-template #contactformButtonOutline>
           <ion-icon name="mail-outline"></ion-icon><span class="button-text-wrapper"
-            routerLinkActive="underline">Kontakt</span>
+            routerLinkActive="underline-red">Kontakt</span>
         </ng-template>
       </button>
       <button mat-button [routerLink]="['/businessconcept']" routerLinkActive="activebutton" class="margin-5">
@@ -41,22 +41,22 @@
         </div>
         <ng-template #businessconceptformButtonFilled>
           <ion-icon name="bulb"></ion-icon><span class="button-text-wrapper"
-            routerLinkActive="underline">Affärsidé</span>
+            routerLinkActive="underline-red">Affärsidé</span>
         </ng-template>
         <ng-template #businessconceptformButtonOutline>
           <ion-icon name="bulb-outline"></ion-icon><span class="button-text-wrapper"
-            routerLinkActive="underline">Affärsidé</span>
+            routerLinkActive="underline-red">Affärsidé</span>
         </ng-template>
       </button>
       <button mat-button [routerLink]="['/gdpr']" routerLinkActive="activebutton" class="margin-5">
         <div *ngIf="href == '/gdpr'; then gdprformButtonFilled else gdprformButtonOutline"></div>
         <ng-template #gdprformButtonFilled>
           <ion-icon name="people"></ion-icon><span class="button-text-wrapper"
-            routerLinkActive="underline">GDPR-Policy</span>
+            routerLinkActive="underline-red">GDPR-Policy</span>
         </ng-template>
         <ng-template #gdprformButtonOutline>
           <ion-icon name="people-outline"></ion-icon><span class="button-text-wrapper"
-            routerLinkActive="underline">GDPR-Policy</span>
+            routerLinkActive="underline-red">GDPR-Policy</span>
         </ng-template>
       </button>
     </div>

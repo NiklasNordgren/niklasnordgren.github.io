@@ -92,6 +92,14 @@ a:active {
   color: inherit !important;
 }
 
+.underline-red {
+  text-decoration: underline;
+  text-decoration-color: #c22325;
+  text-underline-offset: 2px;
+}
 
-//Mobile
-
+.underline-yellow {
+  text-decoration: underline;
+  text-decoration-color: #ffe803;
+  text-underline-offset: 2px;
+}
