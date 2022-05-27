@@ -1,16 +1,10 @@
 <mat-card>
-  <mat-card-title>
+  <mat-card-title >
     <h1>
       <ion-icon name="document"></ion-icon><span> Rotblankett</span>
     </h1>
   </mat-card-title>
-
   <mat-card-content>
-    <!--
-    <pdf-viewer mat-card-image class="pdf-viewer-container" [src]="pdfSrc" [render-text]="true" [show-borders]="true"
-      [original-size]="false" [zoom]="0.5" (page-rendered)="pageIsRendered()" (click)="pdfClick()">
-    </pdf-viewer>
-    -->
     <p></p>
     <p>Information angående rotavdrag finns till bland annat på skatteverkets hemsida, länk finns <span
         class="info-link" (click)="infoLinkClick()">här</span>.</p>
@@ -19,6 +13,5 @@
     <button color="accent" mat-raised-button (click)="pdfClick()">
       <ion-icon name="document"></ion-icon><span class="button-text-wrapper">Öppna Rotblankett</span>
     </button>
-
   </mat-card-content>
 </mat-card>

@@ -17,11 +17,13 @@ export class AppComponent {
     this.changeDetectorRef.detectChanges();
   }
 
-  darkThemeActive: Boolean = false;
+  darkThemeActive: Boolean = true;
   @HostBinding('class') componentCssClass = 'dark-theme';
   href: string = '';
   subscriptions: Subscription = new Subscription();
   mobileQuery: MediaQueryList;
+  faceBookUrl: string = 'https://sv-se.facebook.com/eltjanstjonnyostbergab/';
+  instagramUrl: string = 'https://www.instagram.com/accounts/login/?next=/eltjanstjonnyostbergab/';
 
   constructor(
     public overlayContainer: OverlayContainer,
@@ -32,7 +34,7 @@ export class AppComponent {
     public breakpointObserver: BreakpointObserver
   ) {
     this.toggleTheme();
-    this.mobileQuery = media.matchMedia('(max-width: 920px)');
+    this.mobileQuery = media.matchMedia('(max-width: 1000px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
   }
 
@@ -61,5 +63,13 @@ export class AppComponent {
   ngOnDestroy(): void {
     this.mobileQuery.removeListener(this._mobileQueryListener);
     this.subscriptions.unsubscribe();
+  }
+
+  facebookClick() {
+    window.open(this.faceBookUrl, '_blank');
+  }
+
+  instagramClick() {
+    window.open(this.instagramUrl, '_blank');
   }
 }

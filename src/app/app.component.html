@@ -60,13 +60,13 @@
         </ng-template>
       </button>
     </div>
-    <span class="fill-space"></span>
 
     <span class="fill-space"></span>
-    <button mat-mini-fab class="margin-right-1" aria-label="Instagram" matTooltip="Instagram">
+
+    <button mat-mini-fab class="margin-right-1" aria-label="Instagram" matTooltip="Instagram" (click)="instagramClick()">
       <ion-icon name="logo-instagram"></ion-icon>
     </button>
-    <button mat-mini-fab class="margin-right-1" aria-label="Facebook" matTooltip="Facebook">
+    <button mat-mini-fab class="margin-right-1" aria-label="Facebook" matTooltip="Facebook" (click)="facebookClick()">
       <ion-icon name="logo-facebook"></ion-icon>
     </button>
 
@@ -114,10 +114,10 @@
   <mat-toolbar class="white">
     <img style="height: 80%; width:auto;" src="./../assets/logo.jpg">
     <span class="fill-space"></span>
-    <button mat-mini-fab class="margin-right-3" aria-label="Instagram" matTooltip="Instagram">
+    <button mat-mini-fab class="margin-right-3" aria-label="Instagram" matTooltip="Instagram" (click)="instagramClick()">
       <ion-icon name="logo-instagram"></ion-icon>
     </button>
-    <button mat-mini-fab class="margin-right-3" aria-label="Facebook" matTooltip="Facebook">
+    <button mat-mini-fab class="margin-right-3" aria-label="Facebook" matTooltip="Facebook" (click)="facebookClick()">
       <ion-icon name="logo-facebook"></ion-icon>
     </button>
 
@@ -182,10 +182,10 @@
         <button mat-mini-fab [routerLink]="['/gdpr']">
           <div *ngIf="href == '/gdpr'; then gdprButtonFilled else gdprButtonOutline"></div>
           <ng-template #gdprButtonFilled>
-            <ion-icon name="person"></ion-icon>
+            <ion-icon name="people"></ion-icon>
           </ng-template>
           <ng-template #gdprButtonOutline>
-            <ion-icon name="person-outline"></ion-icon>
+            <ion-icon name="people-outline"></ion-icon>
           </ng-template>
         </button>
       </div>
