@@ -1,27 +1,29 @@
 <mat-card>
-  <mat-card-title>
-    <h1 style="padding-top: 16px; padding-left: 16px;">
-      <ion-icon name="home"></ion-icon><span span class="underline-white button-text-wrapper">Hem</span>
-    </h1>
-  </mat-card-title>
   <mat-card-content>
 
     <div *ngIf="mobileQuery.matches; then mobile else browser"></div>
     <ng-template #browser>
 
       <mat-grid-list #grid [cols]="cols" rowHeight="20:11" style="margin-bottom: 2px;">
-        <mat-grid-tile [colspan]="4" [rowspan]="4">
-          <div class="container image">
+        <mat-grid-tile [colspan]="8" [rowspan]="8">
+          <div>
             <img src='./../assets/banner1.jpg' style="width:100%;">
-            <div class="content">
-              <p>Hej, jag heter Jonny Östberg och det är jag som äger och driver företaget. Jag har arbetat som
-                elektriker sedan 1988 i lite olika bolag. År 2014 valde jag att starta ett eget företag vilket jag
-                tycker var ett bra val med tanke på mitt arbetssätt. Jag tycker om att vara med och hjälpa mina kunder i
-                sina olika val med sina projekt och även föra en dialog med dom under arbetets gång.</p>
+            <div class="center">
+              <div class="transparent-container">
+                <h1>
+                  <ion-icon name="home"></ion-icon><span span class="underline-white button-text-wrapper">Välkommen till
+                    Eltjänst Jonny Östberg AB</span>
+                </h1>
+                <p>Hej, jag heter Jonny Östberg och det är jag som äger och driver företaget. Jag har arbetat som
+                  elektriker sedan 1988 i lite olika bolag. År 2014 valde jag att starta ett eget företag vilket jag
+                  tycker var ett bra val med tanke på mitt arbetssätt. Jag tycker om att vara med och hjälpa mina kunder
+                  i
+                  sina olika val med sina projekt och även föra en dialog med dom under arbetets gång.</p>
+              </div>
             </div>
           </div>
         </mat-grid-tile>
-        <mat-grid-tile *ngFor="let tile of tiles | slice:1" [colspan]="tile.cols" [rowspan]="tile.rows">
+        <mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows">
           <img class="image" src={{tile.imgSrc}}>
         </mat-grid-tile>
       </mat-grid-list>
@@ -29,20 +31,25 @@
     </ng-template>
     <ng-template #mobile>
 
-      <div class="container">
-        <img src='./../assets/banner1.jpg' style="width:100%;">
-        <div class="content">
-          <p>Hej, jag heter Jonny Östberg och det är jag som äger och driver företaget. Jag har arbetat som
-            elektriker sedan 1988 i lite olika bolag. År 2014 valde jag att starta ett eget företag vilket jag
-            tycker var ett bra val med tanke på mitt arbetssätt. Jag tycker om att vara med och hjälpa mina kunder i
-            sina olika val med sina projekt och även föra en dialog med dom under arbetets gång.</p>
-        </div>
+
+
+      <img src='./../assets/banner1.jpg' style="width:100%;">
+      <div class="padding-3">
+        <h1>
+          <ion-icon name="home"></ion-icon><span span class="underline-white button-text-wrapper">Välkommen till
+            Eltjänst Jonny Östberg AB</span>
+        </h1>
+        <p>Hej, jag heter Jonny Östberg och det är jag som äger och driver företaget. Jag har arbetat som
+          elektriker sedan 1988 i lite olika bolag. År 2014 valde jag att starta ett eget företag vilket jag
+          tycker var ett bra val med tanke på mitt arbetssätt. Jag tycker om att vara med och hjälpa mina kunder i
+          sina olika val med sina projekt och även föra en dialog med dom under arbetets gång.</p>
       </div>
 
 
       <mat-grid-list cols="1" style="margin-bottom: 2px;">
 
-        <mat-grid-tile *ngFor="let tile of tiles | slice:1" [colspan]="1" [rowspan]="1">
+
+        <mat-grid-tile *ngFor="let tile of tiles" [colspan]="1" [rowspan]="1">
           <div style="width: auto; height: 100%;">
 
             <img style="margin-bottom: 2px;" class="image" src={{tile.imgSrc}}>

@@ -40,11 +40,40 @@ export class HomeComponent implements OnInit {
 
   tiles: Tile[] = [
     {
-      cols: 8,
-      rows: 2,
-      imgSrc: './../assets/banner1.jpg',
-      textOverImage:
-        'Hej, jag heter Jonny Östberg och det är jag som äger och driver företaget. Jag har arbetat som elektriker sedan 1988 i lite olika bolag. År 2014 valde jag att starta ett eget företag vilket jag tycker var ett bra val med tanke på mitt arbetssätt. Jag tycker om att vara med och hjälpa mina kunder i sina olika val med sina projekt och även föra en dialog med dom under arbetets gång.',
+      cols: 2,
+      rows: 4,
+      imgSrc: './../assets/job19_garage.jpg',
+      textOverImage: '',
+    },
+    {
+      cols: 2,
+      rows: 4,
+      imgSrc: './../assets/job20_garage.jpg',
+      textOverImage: '',
+    },
+    {
+      cols: 2,
+      rows: 4,
+      imgSrc: './../assets/job21_floor_heating.jpg',
+      textOverImage: '',
+    },
+    {
+      cols: 2,
+      rows: 4,
+      imgSrc: './../assets/job23_spotlights.jpg',
+      textOverImage: '',
+    },
+    {
+      cols: 2,
+      rows: 4,
+      imgSrc: './../assets/job24_church.jpg',
+      textOverImage: '',
+    },
+    {
+      cols: 2,
+      rows: 4,
+      imgSrc: './../assets/job25_circuits.jpg',
+      textOverImage: '',
     },
     {
       cols: 2,
@@ -52,7 +81,6 @@ export class HomeComponent implements OnInit {
       imgSrc: './../assets/job17_facade.jpg',
       textOverImage: '',
     },
-
     {
       cols: 2,
       rows: 4,
