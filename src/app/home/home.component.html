@@ -1,9 +1,7 @@
 <mat-card>
   <mat-card-content>
-
     <div *ngIf="mobileQuery.matches; then mobile else browser"></div>
     <ng-template #browser>
-
       <mat-grid-list #grid [cols]="cols" rowHeight="20:11" style="margin-bottom: 2px;">
         <mat-grid-tile [colspan]="8" [rowspan]="8">
           <div>
@@ -29,13 +27,15 @@
         <mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows">
           <img class="image" src={{tile.imgSrc}}>
         </mat-grid-tile>
+        <mat-grid-tile [colspan]="2" [rowspan]="4">
+          <img src='./../assets/FIKK.png'>
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="2" [rowspan]="4">
+          <img src='./../assets/aktivskola.png'>
+        </mat-grid-tile>
       </mat-grid-list>
-
     </ng-template>
     <ng-template #mobile>
-
-
-
       <img src='./../assets/banner1.jpg' style="width:100%;">
       <div class="padding-3">
         <h1>
@@ -49,25 +49,19 @@
           tycker var ett bra val med tanke på mitt arbetssätt. Jag tycker om att vara med och hjälpa mina kunder i
           sina olika val med sina projekt och även föra en dialog med dom under arbetets gång.</p>
       </div>
-
-
       <mat-grid-list cols="1" style="margin-bottom: 2px;">
-
-
         <mat-grid-tile *ngFor="let tile of tiles" [colspan]="1" [rowspan]="1">
           <div style="width: auto; height: 100%;">
-
             <img style="margin-bottom: 2px;" class="image" src={{tile.imgSrc}}>
-            <p>{{tile.textOverImage}}</p>
           </div>
         </mat-grid-tile>
+        <mat-grid-tile [colspan]="1" [rowspan]="1">
+          <img src='./../assets/FIKK.png'>
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="1" [rowspan]="1">
+          <img src='./../assets/aktivskola.png'>
+        </mat-grid-tile>
       </mat-grid-list>
-
-
-
     </ng-template>
-
-
-
   </mat-card-content>
 </mat-card>

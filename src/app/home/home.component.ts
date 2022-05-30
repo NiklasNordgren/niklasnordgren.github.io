@@ -152,6 +152,18 @@ export class HomeComponent implements OnInit {
       imgSrc: './../assets/job14_kitchen.jpg',
       textOverImage: '',
     },
+    {
+      cols: 2,
+      rows: 4,
+      imgSrc: './../assets/job22_floor_heating.jpg',
+      textOverImage: '',
+    },
+    {
+      cols: 2,
+      rows: 4,
+      imgSrc: './../assets/job5_water.jpg',
+      textOverImage: '',
+    },
 
     /*
     { text: ':)', cols: 2, rows: 1, color: 'lightgreen', imgSrc: "./../assets/job5_water.jpg" },
