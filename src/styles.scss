@@ -18,8 +18,8 @@ body {
 }
 
 .white {
-  color: #ffffff;
-  background-color: #ffffff;
+  color: #ffffff !important;
+  background-color: #ffffff !important;
 }
 
 .fill-space {
@@ -108,4 +108,8 @@ a:active {
   text-decoration: underline;
   text-decoration-color: #ffffff;
   text-underline-offset: 2px;
+}
+
+.mat-typography h1 {
+  margin: 0 0 8px !important;
 }

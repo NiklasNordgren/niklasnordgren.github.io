@@ -182,7 +182,7 @@ export class HomeComponent implements OnInit {
     public media: MediaMatcher,
     private breakpointObserver: BreakpointObserver
   ) {
-    this.mobileQuery = media.matchMedia('(max-width: 1000px)');
+    this.mobileQuery = media.matchMedia('(max-width: 1760px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.breakpointObserver
       .observe([

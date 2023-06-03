@@ -1,7 +1,7 @@
 <div *ngIf="mobileQuery.matches; then mobile else browser"></div>
 
 <ng-template #browser>
-  <mat-toolbar class="white">
+  <mat-toolbar>
     <img style="height: 80%; width:auto; cursor: pointer;" src="./../assets/logo.jpg" [routerLink]="['/home']">
     <div style="margin-left: 50px;">
       <button mat-button [routerLink]="['/home']" routerLinkActive="activebutton" class="margin-5">
@@ -111,7 +111,7 @@
 </ng-template>
 
 <ng-template #mobile>
-  <mat-toolbar class="white">
+  <mat-toolbar>
     <img style="height: 80%; width:auto; cursor: pointer;" src="./../assets/logo.jpg" [routerLink]="['/home']">
     <span class="fill-space"></span>
     <button mat-mini-fab class="margin-right-3" aria-label="Instagram" matTooltip="Instagram" (click)="instagramClick()">
