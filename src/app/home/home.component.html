@@ -67,17 +67,25 @@
           elektriker sedan 1988 i lite olika bolag. År 2014 valde jag att starta ett eget företag vilket jag
           tycker var ett bra val med tanke på mitt arbetssätt. Jag tycker om att vara med och hjälpa mina kunder i
           sina olika val med sina projekt och även föra en dialog med dom under arbetets gång.</p>
-        <h1 style="color: white !important;">
-          <ion-icon name="logo-rss"></ion-icon><span class="button-text-wrapper">Nyhetsflöde</span>
-        </h1>
-        <mat-divider [inset]="true"></mat-divider>
-        <p></p>
-        <div class="iframe-fb-container d-flex justify-content-center">
-          <iframe class="iframe-fb-br" style="border-radius: 10px;"
-            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Feltjanstjonnyostbergab%2F&tabs=timeline&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=true&appId=797033528313106"
-            style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true"
-            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-        </div>
+
+        <mat-accordion>
+          <mat-expansion-panel [expanded]="true" matRipple [matRippleCentered]="true">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <h1>
+                  <ion-icon name="logo-rss"></ion-icon><span span class="button-text-wrapper">Nyhetsflöde</span>
+                </h1>
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="iframe-fb-container d-flex justify-content-center mb-3">
+              <iframe class="iframe-fb-br" style="border-radius: 10px;"
+                src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Feltjanstjonnyostbergab%2F&tabs=timeline&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=true&appId=797033528313106"
+                style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true"
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+            </div>
+          </mat-expansion-panel>
+        </mat-accordion>
+
       </div>
       <mat-grid-list cols="1" style="margin-bottom: 2px;">
         <mat-grid-tile *ngFor="let tile of tiles" [colspan]="1" [rowspan]="1">

@@ -12,6 +12,8 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatRippleModule} from '@angular/material/core';
 
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 
@@ -43,7 +45,9 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
     MatGridListModule,
     MatDividerModule,
     PdfViewerModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatExpansionModule,
+    MatRippleModule
   ],
   providers: [],
   bootstrap: [AppComponent],

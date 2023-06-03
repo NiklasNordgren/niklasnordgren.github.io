@@ -29,7 +29,7 @@ body {
 .button-text-wrapper {
   margin-left: 3px;
   display: inline-block !important;
-  vertical-align: middle !important;
+  vertical-align: baseline !important;
 }
 
 .mat-card {
@@ -112,4 +112,8 @@ a:active {
 
 .mat-typography h1 {
   margin: 0 0 8px !important;
+}
+
+.mat-expansion-panel-body {
+  padding: 0 !important;
 }
