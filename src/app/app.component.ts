@@ -61,13 +61,9 @@ export class AppComponent {
 
     this.meta.addTags([
       {
-        name: 'description',
-        content:
-          'Välkommen till Eltjänst Jonny Östberg AB, elektriker firma i Sandviken. Begär en kostnadsfri offert idag.',
-      },
-      {
         name: 'keywords',
-        content: 'El, Elektriker, Storvik, Kungsgården, Åshammar, Jäderfors, Sandviken, Gävle, Årsunda, Hofors, Laddstolpe, Elinstallation, Jour',
+        content:
+          'El, Elektriker, Storvik, Kungsgården, Åshammar, Jäderfors, Sandviken, Gävle, Årsunda, Hofors, Laddstolpe, Elinstallation, Jour',
       },
       { name: 'author', content: 'Eltjänst Jonny Östberg AB' },
       { property: 'og:title', content: 'Eltjänst Jonny Östberg AB' },
@@ -79,7 +75,10 @@ export class AppComponent {
       { property: 'og:type', content: 'website' },
       { property: 'og:locale', content: 'sv_SE' },
       { property: 'og:url', content: 'https://www.eltjanstsandviken.se/' },
-      { property: 'robots', content: 'index, follow, max-image-preview:large, max-snippet:-1' }
+      {
+        property: 'robots',
+        content: 'index, follow, max-image-preview:large, max-snippet:-1',
+      },
     ]);
   }
 

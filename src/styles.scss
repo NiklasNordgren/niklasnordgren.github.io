@@ -17,6 +17,13 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
+.hidden {
+  visibility: hidden;
+  height: 0;
+  width: 0;
+  margin: 0 !important;
+}
+
 .white {
   color: #ffffff !important;
   background-color: #ffffff !important;
@@ -34,7 +41,7 @@ body {
 
 .mat-card {
   border-radius: 0px !important;
-  height: calc(100% - (2*74px));
+  height: calc(100% - (2 * 74px));
   overflow-y: auto;
 }
 
@@ -108,10 +115,6 @@ a:active {
   text-decoration: underline;
   text-decoration-color: #ffffff;
   text-underline-offset: 2px;
-}
-
-.mat-typography h1 {
-  margin: 0 0 8px !important;
 }
 
 .mat-expansion-panel-body {

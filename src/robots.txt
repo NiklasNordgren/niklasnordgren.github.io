@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Allow: /home/
+Allow: /rootform/
+Allow: /contact/
+Allow: /businessconcept/
+Allow: /gdpr/
