@@ -1,9 +1,15 @@
-import { ChangeDetectorRef, Component, HostBinding, HostListener } from '@angular/core';
+import {
+  ChangeDetectorRef,
+  Component,
+  HostBinding,
+  HostListener,
+} from '@angular/core';
 import { OverlayContainer } from '@angular/cdk/overlay';
 import { Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { Subscription } from 'rxjs';
 import { BreakpointObserver, MediaMatcher } from '@angular/cdk/layout';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -11,9 +17,8 @@ import { BreakpointObserver, MediaMatcher } from '@angular/cdk/layout';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-
   @HostListener('window:resize', ['$event'])
-  onResize(event: { target: { innerWidth: any; }; }) {
+  onResize(event: { target: { innerWidth: any } }) {
     this.changeDetectorRef.detectChanges();
   }
 
@@ -23,7 +28,8 @@ export class AppComponent {
   subscriptions: Subscription = new Subscription();
   mobileQuery: MediaQueryList;
   faceBookUrl: string = 'https://sv-se.facebook.com/eltjanstjonnyostbergab/';
-  instagramUrl: string = 'https://www.instagram.com/accounts/login/?next=/eltjanstjonnyostbergab/';
+  instagramUrl: string =
+    'https://www.instagram.com/accounts/login/?next=/eltjanstjonnyostbergab/';
 
   constructor(
     public overlayContainer: OverlayContainer,
@@ -31,7 +37,8 @@ export class AppComponent {
     public router: Router,
     public location: Location,
     public media: MediaMatcher,
-    public breakpointObserver: BreakpointObserver
+    public breakpointObserver: BreakpointObserver,
+    private meta: Meta
   ) {
     this.toggleTheme();
     this.mobileQuery = media.matchMedia('(max-width: 1000px)');
@@ -51,6 +58,29 @@ export class AppComponent {
       }
     });
     this.subscriptions.add(routerSub);
+
+    this.meta.addTags([
+      {
+        name: 'description',
+        content:
+          'Välkommen till Eltjänst Jonny Östberg AB, elektriker firma i Sandviken. Begär en kostnadsfri offert idag.',
+      },
+      {
+        name: 'keywords',
+        content: 'El, Elektriker, Storvik, Kungsgården, Åshammar, Jäderfors, Sandviken, Gävle, Årsunda, Hofors, Laddstolpe, Elinstallation, Jour',
+      },
+      { name: 'author', content: 'Eltjänst Jonny Östberg AB' },
+      { property: 'og:title', content: 'Eltjänst Jonny Östberg AB' },
+      {
+        property: 'og:description',
+        content:
+          'Välkommen till Eltjänst Jonny Östberg AB, elektriker firma i Sandviken.',
+      },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:locale', content: 'sv_SE' },
+      { property: 'og:url', content: 'https://www.eltjanstsandviken.se/' },
+      { property: 'robots', content: 'index, follow, max-image-preview:large, max-snippet:-1' }
+    ]);
   }
 
   toggleTheme(): void {
